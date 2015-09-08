@@ -31,7 +31,7 @@
   NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"model"];
   NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"model"];
   NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"model"];
-  NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_reference_caffenet" ofType:@"caffemodel" inDirectory:@"model"];
+  NSString* trained_file = [NSBundle.mainBundle pathForResource:@"nin_finetune" ofType:@"caffemodel" inDirectory:@"model"];
   string model_file_str = std::string([model_file UTF8String]);
   string label_file_str = std::string([label_file UTF8String]);
   string trained_file_str = std::string([trained_file UTF8String]);
@@ -41,6 +41,7 @@
   
   cv::Mat src_img;
   UIImageToMat(example, src_img);
+  cv::cvtColor(src_img, src_img, CV_RGBA2BGRA);
   
   Classifier classifier = Classifier(model_file_str, trained_file_str, mean_file_str, label_file_str);
   std::vector<Prediction> result = classifier.Classify(src_img);
