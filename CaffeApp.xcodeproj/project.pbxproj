@@ -111,6 +111,15 @@
 		88BE9ED91B5749E60076137A /* libprotoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885E91B91B507693003B736E /* libprotoc.a */; };
 		88BE9EE21B5763C70076137A /* model in Resources */ = {isa = PBXBuildFile; fileRef = 88BE9EE11B5763C70076137A /* model */; };
 		88BE9EE31B5763C70076137A /* model in Resources */ = {isa = PBXBuildFile; fileRef = 88BE9EE11B5763C70076137A /* model */; };
+		A0C8FB931BA08AB7009FB626 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB8A1BA08AB7009FB626 /* AssetsLibrary.framework */; };
+		A0C8FB941BA08AB7009FB626 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB8B1BA08AB7009FB626 /* AVFoundation.framework */; };
+		A0C8FB951BA08AB7009FB626 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB8C1BA08AB7009FB626 /* CoreFoundation.framework */; };
+		A0C8FB961BA08AB7009FB626 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB8D1BA08AB7009FB626 /* CoreGraphics.framework */; };
+		A0C8FB971BA08AB7009FB626 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB8E1BA08AB7009FB626 /* CoreImage.framework */; };
+		A0C8FB981BA08AB7009FB626 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB8F1BA08AB7009FB626 /* CoreMedia.framework */; };
+		A0C8FB991BA08AB7009FB626 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB901BA08AB7009FB626 /* CoreVideo.framework */; };
+		A0C8FB9A1BA08AB7009FB626 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB911BA08AB7009FB626 /* QuartzCore.framework */; };
+		A0C8FB9B1BA08AB7009FB626 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8FB921BA08AB7009FB626 /* VideoToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -331,6 +340,15 @@
 		888C36AB1B508D300012410E /* caffe.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = caffe.proto; sourceTree = "<group>"; };
 		88BE9ED11B5747030076137A /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		88BE9EE11B5763C70076137A /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = SOURCE_ROOT; };
+		A0C8FB8A1BA08AB7009FB626 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		A0C8FB8B1BA08AB7009FB626 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A0C8FB8C1BA08AB7009FB626 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A0C8FB8D1BA08AB7009FB626 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A0C8FB8E1BA08AB7009FB626 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		A0C8FB8F1BA08AB7009FB626 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A0C8FB901BA08AB7009FB626 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A0C8FB911BA08AB7009FB626 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A0C8FB921BA08AB7009FB626 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +356,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C8FB931BA08AB7009FB626 /* AssetsLibrary.framework in Frameworks */,
+				A0C8FB941BA08AB7009FB626 /* AVFoundation.framework in Frameworks */,
+				A0C8FB951BA08AB7009FB626 /* CoreFoundation.framework in Frameworks */,
+				A0C8FB961BA08AB7009FB626 /* CoreGraphics.framework in Frameworks */,
+				A0C8FB971BA08AB7009FB626 /* CoreImage.framework in Frameworks */,
+				A0C8FB981BA08AB7009FB626 /* CoreMedia.framework in Frameworks */,
+				A0C8FB991BA08AB7009FB626 /* CoreVideo.framework in Frameworks */,
+				A0C8FB9A1BA08AB7009FB626 /* QuartzCore.framework in Frameworks */,
+				A0C8FB9B1BA08AB7009FB626 /* VideoToolbox.framework in Frameworks */,
 				8870DA491B5920FC0053CB1B /* libleveldb.a in Frameworks */,
 				885E91BA1B507693003B736E /* libglog.a in Frameworks */,
 				88BE9ED21B5747030076137A /* opencv2.framework in Frameworks */,
@@ -403,6 +430,15 @@
 				885E91B51B507693003B736E /* lib */,
 				8824C79E1B505B940016CC3D /* Supporting Files */,
 				885E91B31B50766D003B736E /* AudioToolbox.framework */,
+				A0C8FB8A1BA08AB7009FB626 /* AssetsLibrary.framework */,
+				A0C8FB8B1BA08AB7009FB626 /* AVFoundation.framework */,
+				A0C8FB8C1BA08AB7009FB626 /* CoreFoundation.framework */,
+				A0C8FB8D1BA08AB7009FB626 /* CoreGraphics.framework */,
+				A0C8FB8E1BA08AB7009FB626 /* CoreImage.framework */,
+				A0C8FB8F1BA08AB7009FB626 /* CoreMedia.framework */,
+				A0C8FB901BA08AB7009FB626 /* CoreVideo.framework */,
+				A0C8FB911BA08AB7009FB626 /* QuartzCore.framework */,
+				A0C8FB921BA08AB7009FB626 /* VideoToolbox.framework */,
 				885E91B11B507664003B736E /* Accelerate.framework */,
 				88BE9ED11B5747030076137A /* opencv2.framework */,
 			);

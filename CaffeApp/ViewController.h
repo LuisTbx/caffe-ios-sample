@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Takuya Matsuyama. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <opencv2/opencv.hpp>
+#import <opencv2/highgui/ios.h>
+#import <opencv2/highgui/cap_ios.h>
+
+using namespace cv;
 
 @interface ViewController : UIViewController
 
