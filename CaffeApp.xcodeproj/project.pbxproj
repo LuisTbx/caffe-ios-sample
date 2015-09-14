@@ -643,8 +643,8 @@
 		885E91B51B507693003B736E /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				885E91B61B507693003B736E /* libglog.a */,
 				8870DA481B5920FC0053CB1B /* libleveldb.a */,
+				885E91B61B507693003B736E /* libglog.a */,
 				885E91B81B507693003B736E /* libprotobuf.a */,
 				885E91B91B507693003B736E /* libprotoc.a */,
 			);
@@ -844,6 +844,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885E919D1B507651003B736E /* cudnn.cpp in Sources */,
+				885E90FB1B507651003B736E /* accuracy_layer.cpp in Sources */,
+				885E91111B507651003B736E /* cudnn_softmax_layer.cpp in Sources */,
+				885E910F1B507651003B736E /* cudnn_sigmoid_layer.cpp in Sources */,
+				885E91131B507651003B736E /* cudnn_tanh_layer.cpp in Sources */,
 				888C36B01B5091220012410E /* caffe.proto in Sources */,
 				885E90FE1B507651003B736E /* base_conv_layer.cpp in Sources */,
 				885E91501B507651003B736E /* split_layer.cpp in Sources */,
@@ -855,7 +860,6 @@
 				885E919C1B507651003B736E /* benchmark.cpp in Sources */,
 				885E91091B507651003B736E /* cudnn_conv_layer.cpp in Sources */,
 				885E91151B507651003B736E /* data_layer.cpp in Sources */,
-				885E919D1B507651003B736E /* cudnn.cpp in Sources */,
 				885E90F71B507651003B736E /* internal_thread.cpp in Sources */,
 				885E91311B507651003B736E /* loss_layer.cpp in Sources */,
 				885E91391B507651003B736E /* pooling_layer.cpp in Sources */,
@@ -865,7 +869,6 @@
 				885E91A21B507651003B736E /* im2col.cpp in Sources */,
 				885E91551B507651003B736E /* threshold_layer.cpp in Sources */,
 				885E90FC1B507651003B736E /* argmax_layer.cpp in Sources */,
-				885E91111B507651003B736E /* cudnn_softmax_layer.cpp in Sources */,
 				885E914A1B507651003B736E /* slice_layer.cpp in Sources */,
 				885E919E1B507651003B736E /* db.cpp in Sources */,
 				885E913B1B507651003B736E /* power_layer.cpp in Sources */,
@@ -879,13 +882,11 @@
 				885E911D1B507651003B736E /* euclidean_loss_layer.cpp in Sources */,
 				885E913D1B507651003B736E /* prelu_layer.cpp in Sources */,
 				885E913F1B507651003B736E /* reduction_layer.cpp in Sources */,
-				885E91131B507651003B736E /* cudnn_tanh_layer.cpp in Sources */,
 				8824C7A11B505B940016CC3D /* main.m in Sources */,
 				885E91381B507651003B736E /* neuron_layer.cpp in Sources */,
 				885E91AA1B507651003B736E /* gflags.cc in Sources */,
 				885E91AB1B507651003B736E /* gflags_completions.cc in Sources */,
 				885E90F61B507651003B736E /* data_transformer.cpp in Sources */,
-				885E910F1B507651003B736E /* cudnn_sigmoid_layer.cpp in Sources */,
 				885E91521B507651003B736E /* spp_layer.cpp in Sources */,
 				885E90F91B507651003B736E /* absval_layer.cpp in Sources */,
 				885E91351B507651003B736E /* multinomial_logistic_loss_layer.cpp in Sources */,
@@ -893,7 +894,6 @@
 				885E91441B507651003B736E /* sigmoid_cross_entropy_loss_layer.cpp in Sources */,
 				885E91431B507651003B736E /* reshape_layer.cpp in Sources */,
 				885E911A1B507651003B736E /* dummy_data_layer.cpp in Sources */,
-				885E90FB1B507651003B736E /* accuracy_layer.cpp in Sources */,
 				885E91181B507651003B736E /* dropout_layer.cpp in Sources */,
 				885E90FF1B507651003B736E /* base_data_layer.cpp in Sources */,
 				885E91581B507651003B736E /* net.cpp in Sources */,
@@ -1049,6 +1049,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1082,6 +1083,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

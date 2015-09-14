@@ -43,7 +43,9 @@
   UIImageToMat(example, src_img);
   cv::cvtColor(src_img, src_img, CV_RGBA2BGRA);
   
-  Classifier classifier = Classifier(model_file_str, trained_file_str, mean_file_str, label_file_str);
+    Classifier classifier;
+    classifier.SetStrings(model_file_str, trained_file_str, mean_file_str, label_file_str);
+    classifier.LoadNet();
   std::vector<Prediction> result = classifier.Classify(src_img);
 
   for (std::vector<Prediction>::iterator it = result.begin(); it != result.end(); ++it) {
