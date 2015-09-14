@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "Classifier.h"
 
 @interface ViewController ()
 
@@ -18,6 +17,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
+    [self loadNet];
   [self predict];
 }
 
@@ -26,26 +26,29 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (void)loadNet;
+{
+    NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"model"];
+    NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"model"];
+    NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"model"];
+    NSString* trained_file = [NSBundle.mainBundle pathForResource:@"nin_finetune" ofType:@"caffemodel" inDirectory:@"model"];
+    string model_file_str = std::string([model_file UTF8String]);
+    string label_file_str = std::string([label_file UTF8String]);
+    string trained_file_str = std::string([trained_file UTF8String]);
+    string mean_file_str = std::string([mean_file UTF8String]);
+    
+    classifier.SetStrings(model_file_str, trained_file_str, mean_file_str, label_file_str);
+    classifier.LoadNet();
+}
+
 - (void)predict;
 {
-  NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"model"];
-  NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"model"];
-  NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"model"];
-  NSString* trained_file = [NSBundle.mainBundle pathForResource:@"nin_finetune" ofType:@"caffemodel" inDirectory:@"model"];
-  string model_file_str = std::string([model_file UTF8String]);
-  string label_file_str = std::string([label_file UTF8String]);
-  string trained_file_str = std::string([trained_file UTF8String]);
-  string mean_file_str = std::string([mean_file UTF8String]);
-  
   UIImage* example = [UIImage imageNamed:@"image_0002.jpg"];
   
   cv::Mat src_img;
   UIImageToMat(example, src_img);
   cv::cvtColor(src_img, src_img, CV_RGBA2BGRA);
-  
-    Classifier classifier;
-    classifier.SetStrings(model_file_str, trained_file_str, mean_file_str, label_file_str);
-    classifier.LoadNet();
+    
   std::vector<Prediction> result = classifier.Classify(src_img);
 
   for (std::vector<Prediction>::iterator it = result.begin(); it != result.end(); ++it) {
