@@ -1,7 +1,7 @@
 Caffe iOS sample
 ================
 
-This is an example XCode project using iOS version of Caffe built by [aleph7](https://github.com/aleph7/caffe).
+This is a fork of [Noradaiko](https://github.com/noradaiko/caffe-ios-sample) example XCode project using iOS version of Caffe built by [aleph7](https://github.com/aleph7/caffe).
 
 It also includes a class `Classifier` which is the `cpp_classification` imported from Caffe C++ example.
 It can classify images and outputs result with labels in the XCode console.
@@ -15,7 +15,7 @@ It can classify images and outputs result with labels in the XCode console.
 Clone it:
 
 ```
-$ git clone --recursive git@github.com:noradaiko/caffe-ios-sample.git
+$ git clone --recursive https://github.com/LuisTbx/caffe-ios-sample
 ```
 
 ### Prepare model files
